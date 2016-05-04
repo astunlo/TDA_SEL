@@ -1,0 +1,31 @@
+Principales métodos de la API Reflection de JAVA:
+
+java.lang.Class forName(String className): Carga una clase del classpath a partir de su nombre (nombre completo, con todos los paquetes. Si la clase no se puede cargar, porque no se encuentra en el classpath, se lanzará una java.lang.ClassNotFoundException.
+
+java.lang.reflect.Field getField(String name): Devuelve un campo público de la clase, a partir de su nombre. Si la clase no contiene ningún campo con ese nombre, se comprueban sus superclases recursivamente, y en caso de no encontrar finalmente el campo, se lanzará la excepcion java.lang.NoSuchFieldException.
+
+java.lang.reflect.Field[] getFields(): Devuelve un array con todos los campos públicos de la clase, y de sus superclases.
+
+java.lang.reflect.Method getMethod(String name, Class[] parameterTypes): Devuelve un método público de la clase, a partir de su nombre, y de un array con las clases de los parámetros del método. Si la clase no contiene ningún método con ese nombre y esos parámetros, se lanzará la excepcion java.lang.NoSuchMethodException.
+
+java.lang.reflect.Method[] getMethods(): Devuelve un array con todos los métodos públicos de la clase, y de sus superclases.
+
+java.lang.Class[] getInterfaces(): Devuelve un array con todos los interfaces que implementa la clase.
+
+public String getName(): Devuelve el nombre del campo.
+
+public Class getType(): Devuelve la clase del campo.
+
+public Object get(Object obj): Devuelve el valor del campo en un objeto.
+
+public void set(Object obj, Object value): Asigna un valor al campo en un objeto.
+
+public String getName(): Devuelve el nombre del método.
+
+public Class[] getParameterTypes(): Devuelve un array con las clases de los parámetros del método.
+
+public Class[] getExceptionTypes(): Devuelve un array con las clases de las excepciones que puede lanzar el método.
+
+public Class getReturnType(): Devuelve la clase del valor que devuelve el método.
+
+public Object invoke(Object obj, Object[] args): Ejecuta el método sobre un objeto, pasándole los parámetros necesarios, y devuelve su resultado.
